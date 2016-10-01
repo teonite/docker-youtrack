@@ -1,5 +1,5 @@
-FROM dzwicker/docker-ubuntu:latest
-MAINTAINER daniel.zwicker@in2experience.com
+FROM ubuntu:16.04
+MAINTAINER robert@teonite.com
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN \
@@ -12,7 +12,7 @@ RUN \
 COPY entry-point.sh /entry-point.sh
 
 RUN \
-    export YOUTRACK_VERSION=6.5.17057 && \
+    export YOUTRACK_VERSION=7.0.27505 && \
     mkdir -p /usr/local/youtrack && \
     mkdir -p /var/lib/youtrack && \
     cd /usr/local/youtrack && \
